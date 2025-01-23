@@ -1,8 +1,0 @@
-*.zip
-*.png
-PROMPTS.txt
-image_steganography/steganography/__pycache__/__init__.cpython-312.pyc
-image_steganography/steganography/__pycache__/encoder.cpython-312.pyc
-image_steganography/steganography/__pycache__/image_utils.cpython-312.pyc
-image_steganography/steganography/gui/__pycache__/__init__.cpython-312.pyc
-image_steganography/steganography/gui/__pycache__/main_window.cpython-312.pyc
