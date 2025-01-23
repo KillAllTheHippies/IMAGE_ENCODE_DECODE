@@ -3,13 +3,20 @@
 A GUI application for encoding and decoding text messages in images using LSB (Least Significant Bit) and alpha channel steganography.
 
 ## Features
-- Encode text messages in images using:
-  - LSB encoding (RGB channels)
-  - Alpha channel encoding
-- Decode messages from encoded images
-- Supports PNG, BMP, and TIFF formats
-- Shows image preview and message capacity
-- Simple and intuitive interface
+
+Functionality:
+- LSB encoding (RGB channels)
+- Alpha channel encoding
+- Message decoding
+- Image format validation
+- Capacity calculation
+- Image preview generation
+
+Compatible Image Types:
+- PNG
+- BMP
+- TIFF
+- WEBP (RGB/RGBA only)
 
 ## Requirements
 - Python 3.8+
@@ -19,9 +26,10 @@ A GUI application for encoding and decoding text messages in images using LSB (L
 
 ## Installation
 1. Clone the repository
-2. Install dependencies:
+2. Install dependencies and package:
    ```bash
    pip install -r requirements.txt
+   pip install -e .  # Install in editable mode
    ```
 
 ## Usage
