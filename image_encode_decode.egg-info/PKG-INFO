@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: image-encode-decode
+Version: 0.1.0
+Summary: Steganography kit
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: flask>=3.1.0
+Requires-Dist: numpy>=2.2.2
+Requires-Dist: pillow>=11.1.0

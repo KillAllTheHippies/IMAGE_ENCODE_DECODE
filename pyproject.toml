@@ -1,0 +1,11 @@
+[project]
+name = "image-encode-decode"
+version = "0.1.0"
+description = "Steganography kit"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.0",
+    "numpy>=2.2.2",
+    "pillow>=11.1.0",
+]

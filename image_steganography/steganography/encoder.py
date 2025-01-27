@@ -41,7 +41,7 @@ class ImageEncoder:
                 for k in range(3):  # Only modify RGB channels
                     if index < message_length:
                         # Modify LSB
-                        img_array[i, j, k] = (img_array[i, j, k] & ~1) | int(binary_message[index])
+                        img_array[i, j, k] = (img_array[i, j, k] & 0xFE) | int(binary_message[index])
                         index += 1
                         
         self.encoded_image = Image.fromarray(img_array)
@@ -72,7 +72,7 @@ class ImageEncoder:
             for j in range(width):
                 if index < message_length:
                     # Modify alpha channel
-                    img_array[i, j, 3] = (img_array[i, j, 3] & ~1) | int(binary_message[index])
+                    img_array[i, j, 3] = (img_array[i, j, 3] & 0xFE) | int(binary_message[index])
                     index += 1
                     
         self.encoded_image = Image.fromarray(img_array)
