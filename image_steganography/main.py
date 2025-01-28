@@ -1,42 +1,17 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QAction, QMenu
-from PyQt5.QtCore import QSettings
-from steganography.gui.main_window import MainWindow
-
-DARK_STYLE = """
-    QWidget {
-        background-color: #1e1e1e;
-        color: #ffffff;
-    }
-    QMenuBar {
-        background-color: #2d2d2d;
-    }
-    QMenuBar::item:selected {
-        background: #3d3d3d;
-    }
-    QMenu {
-        background-color: #2d2d2d;
-    }
-    QMenu::item:selected {
-        background-color: #3d3d3d;
-    }
-"""
+from PyQt5.QtWidgets import QApplication
+from image_steganography.steganography.core import SteganographyApp, encode, decode
 
 def main():
     """Application entry point"""
-    app = QApplication(sys.argv)
+    # Example usage of encode/decode functions
+    encoded_image = encode("input.png", "secret message", "output.png")
+    decoded_message = decode(encoded_image)
     
-    # Create and show main window
-    window = MainWindow()
+    print(f"Decoded message: {decoded_message}")
     
-    # Initialize settings
-    settings = QSettings("YourCompany", "Steganography")
-    if settings.value("dark_mode", "false") == "true":
-        window.apply_dark_style(DARK_STYLE)
-    
-    window.show()
-    
-    # Start application event loop
+    app = SteganographyApp(sys.argv)
+    app.initialize()
     sys.exit(app.exec_())
 
 if __name__ == '__main__':

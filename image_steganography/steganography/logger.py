@@ -5,6 +5,37 @@ from PIL import Image
 import io
 import os
 
+import logging
+from logging.handlers import RotatingFileHandler
+
+def get_logger(name, log_file='steganography.log', level=logging.INFO):
+    """Configure and return a logger instance"""
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+
+    # Create formatter
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+
+    # Create rotating file handler
+    file_handler = RotatingFileHandler(
+        log_file,
+        maxBytes=1024*1024,  # 1MB
+        backupCount=5
+    )
+    file_handler.setFormatter(formatter)
+
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(formatter)
+
+    # Add handlers
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
+    return logger
+
 class MessageLogger:
     def __init__(self, db_path='messages.db'):
         self.db_path = db_path

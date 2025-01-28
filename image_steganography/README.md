@@ -1,4 +1,4 @@
-# Image Steganography Application
+# The Steganograsaurus
 
 A GUI application for encoding and decoding text messages in images using LSB (Least Significant Bit) and alpha channel steganography.
 

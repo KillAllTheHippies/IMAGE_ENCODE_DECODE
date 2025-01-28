@@ -1,0 +1,12 @@
+2025-01-27 12:34:05,842 - image_steganography.steganography.core.image_processor - ERROR - Failed to load image: [Errno 2] No such file or directory: 'input.png'
+2025-01-27 12:36:54,923 - image_steganography.steganography.core.image_processor - ERROR - Failed to load image: [Errno 2] No such file or directory: 'input.png'
+2025-01-27 12:38:57,293 - image_steganography.steganography.core.image_processor - ERROR - Failed to load image: name 'validate_image' is not defined
+2025-01-27 12:45:00,569 - image_steganography.steganography.core.image_processor - ERROR - Failed to load image: name 'validate_image' is not defined
+2025-01-27 12:45:18,808 - image_steganography.steganography.core.image_processor - ERROR - Failed to load image: 'PngImageFile' object has no attribute 'read'
+2025-01-27 12:55:18,997 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png
+2025-01-27 13:09:05,820 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png
+2025-01-27 13:14:46,996 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png
+2025-01-27 13:23:47,966 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png
+2025-01-27 13:24:25,038 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png
+2025-01-27 14:14:35,290 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png
+2025-01-27 14:49:03,554 - image_steganography.steganography.core.image_processor - INFO - Successfully loaded image from input.png

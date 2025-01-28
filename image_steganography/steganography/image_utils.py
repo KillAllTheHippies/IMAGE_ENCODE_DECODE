@@ -69,11 +69,15 @@ def calculate_max_capacity(image_input, method='lsb'):
 
 def convert_to_rgba(image_input):
     """Convert image to RGBA format if not already"""
-    if is_base64_image(image_input):
-        img = decode_base64_image(image_input)
+    # If input is already an Image object, use it directly
+    if isinstance(image_input, Image.Image):
+        img = image_input
     else:
-        img = Image.open(image_input)
-        
+        if is_base64_image(image_input):
+            img = decode_base64_image(image_input)
+        else:
+            img = Image.open(image_input)
+
     if img.mode != 'RGBA':
         return img.convert('RGBA')
     return img
